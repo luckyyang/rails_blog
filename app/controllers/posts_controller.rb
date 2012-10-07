@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with :name => "liujiyang", :password => "jiyangliu", :except => [:index, :show]
   # GET /posts
   # GET /posts.json
   def index
